@@ -57,7 +57,7 @@ public class AddCustomer {
 		customer_name = getString("Customer name: \n");
 		drink = getString("Beverage: \n");
 		size = getString("What size? L, M or S: \n");
-		extra = getString("Describe extras: \n");
+		extra = getString("Any extra: \n");
 		price = getInt("Please, enter the price:");
 		
 		

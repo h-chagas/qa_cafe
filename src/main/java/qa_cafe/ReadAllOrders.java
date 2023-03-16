@@ -26,7 +26,7 @@ public class ReadAllOrders {
 
 		try {
 			rs = statement.executeQuery(query);
-			System.out.println("Check live orders:\n");
+			System.out.println("Check all orders:\n");
 			while (rs.next()) {
 				System.out.println("order_id: " + rs.getInt("order_id")
 						+ "\tcustomer_name: " + rs.getString("customer_name")

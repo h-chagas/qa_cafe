@@ -25,8 +25,10 @@ public class Manage {
 
 			option = userInput.nextLine().trim().toUpperCase().charAt(0);
 
-			if (option == 'Q')
+			if (option == 'Q') {
+				System.out.println("See you soon!");
 				break;
+			}
 
 			if (option == 'C') {
 				if (created)
@@ -34,6 +36,7 @@ public class Manage {
 				else {
 					Create.proceed();
 					created = true;
+					
 				}
 				continue;
 			}
