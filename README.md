@@ -17,7 +17,7 @@
 #### -- Create a database and table --<br>
 9. First thing first: If you don't have MySQL installed, installed so. Installing MySQL Workbench will also make the operation easier. Once you have your MySQL setup, complete the steps 3 and 4.<br>
 10. Run the Manage.java file again. A menu will be shown in the IDE console area, with a greeting message and some options:<br>
-![Show the system's main menu](https://ibb.co/RbdxPjg)
+![Show the system's main menu](https://i.ibb.co/1QjDKz0/Screenshot-2023-03-16-at-14-38-11.png)
 11. The first thing to do is **create a DB and a table**. So type **C** in the console and press enter. A 
 
 
