@@ -65,7 +65,7 @@ If it worked, a confirmation message will be shown; <br>
 If it worked, a "See you soon!" message will be shown; <br>
 
 
-Future aditional fuatures:
+Future aditional features:
 - [ ] Autoincrement for order ID's;
 - [ ] Float number to price column;
 - [ ] Create a GUI for the project;
