@@ -57,11 +57,11 @@ If the form was filled properly, a confirmation message will be shown followed b
 If it worked, a confirmation message will be shown; <br>
 
 #### -- Delete all customer orders --<br>
-16. Choose the option 'Delete all orders' typing **T** in the console; <br>
+21. Choose the option 'Delete all orders' typing **T** in the console; <br>
 If it worked, a confirmation message will be shown; <br>
 
 #### -- To quit --<br>
-16. Choose the option 'Delete all orders' typing **T** in the console; <br>
+22. Choose the option 'Delete all orders' typing **T** in the console; <br>
 If it worked, a "See you soon!" message will be shown; <br>
 
 
