@@ -76,7 +76,6 @@ To develop the tests, I used JUnit which is the most popular Java unit testing f
 
 
 Future aditional features:
-- [ ] Autoincrement for order ID's;
 - [ ] Float number to price column;
 - [ ] Create a GUI for the project;
 - [ ] Add more columns for the orders table, such as to_eat column;
