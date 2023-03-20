@@ -23,13 +23,16 @@ public class Update {
 		return s.nextLine();
 	}
 	
-	public static void proceed() {
+	public static boolean proceed(boolean updatedWorked) {
 		
 		String drink;
 		String size;
 		String extras;
 		float price;
 		int order_id;
+		
+		boolean updateOrder = false;
+		updatedWorked = false;
 						
 		
 		try {
@@ -53,6 +56,7 @@ public class Update {
 		try {
 			statement.executeUpdate("UPDATE orders SET drink='" + drink + "',  size= '"+ size + "', extras= '" + extras + "', price= '" + price + "' WHERE order_id = " + order_id + ";");
 			System.out.println("Order successfully updated. The order " + order_id + " is now:");
+			updatedWorked = true;
 			
 			rs = statement.executeQuery(query);
 			while (rs.next()) {
@@ -67,5 +71,11 @@ public class Update {
 			System.out.println("Insertion failed.");
 			e.printStackTrace();
 		}
+		
+		if (updatedWorked == true) {
+			updateOrder = true;
+		}
+		return updateOrder;
+		
 	}
 }

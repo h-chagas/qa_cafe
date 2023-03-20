@@ -11,7 +11,10 @@ public class DeleteAllOrders {
 	static Statement statement;
 	static String myPass = Passcode.mySqlPassword;
 	
-	public static void proceed() {
+	public static boolean proceed(boolean deleteAllWorked) {
+		boolean deleteAllOrders = false;
+		deleteAllWorked = false;
+		
 		try {
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qa_cafe_db", "root", myPass);
 			statement = conn.createStatement();
@@ -23,10 +26,16 @@ public class DeleteAllOrders {
 		try {
 			statement.executeUpdate("DELETE FROM orders");
 			System.out.println("All data successfully deleted");
+			deleteAllWorked = true;
 		} catch (SQLException e) {
 			System.out.println("Deletion failed.");
 			e.printStackTrace();
 		}
+		
+		if (deleteAllWorked) {
+			deleteAllOrders = true;
+		}
+		return deleteAllOrders;
 	}
 
 }

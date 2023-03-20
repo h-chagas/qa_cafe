@@ -4,6 +4,10 @@ import java.util.Scanner;
 public class Manage {
 	public static void main(String[] args) {
 		boolean created = false;
+		boolean added = false;
+		boolean readAll = false;
+		boolean update = false;
+		boolean deleteAll = false;
 		char option;
 		Scanner userInput = new Scanner(System.in);
 
@@ -34,7 +38,7 @@ public class Manage {
 				if (created)
 					System.out.println("Database and table already created.");
 				else {
-					Create.proceed();
+					Create.proceed(created);
 					created = true;
 					
 				}
@@ -42,7 +46,8 @@ public class Manage {
 			}
 			
 			if (option == 'X') {
-				AddCustomer.proceed();
+				AddCustomer.proceed(added);
+				added = true;
 				continue;
 			}
 
@@ -52,12 +57,13 @@ public class Manage {
 			}
 			
 			if (option == 'A') {
-				ReadAllOrders.proceed();
+				ReadAllOrders.proceed(readAll);
+				readAll = true;
 				continue;
 			}
 
 			if (option == 'U') {
-				Update.proceed();
+				Update.proceed(update);
 				continue;
 			}
 
@@ -67,7 +73,7 @@ public class Manage {
 			}
 			
 			if (option == 'T') {
-				DeleteAllOrders.proceed();
+				DeleteAllOrders.proceed(deleteAll);
 				continue;
 			}
 		}

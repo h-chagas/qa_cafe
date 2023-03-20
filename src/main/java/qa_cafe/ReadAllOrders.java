@@ -12,9 +12,12 @@ public class ReadAllOrders {
 	static Statement statement;
 	static String myPass = Passcode.mySqlPassword;
 	
-	public static void proceed() {
+	public static boolean proceed(boolean readAllWorked) {
 		String query = "SELECT * FROM qa_cafe_db.orders\r\n";
 		ResultSet rs;
+		
+		boolean readAllOrders = false;
+		readAllWorked = false;
 
 		try {
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qa_cafe_db", "root", myPass);
@@ -35,10 +38,17 @@ public class ReadAllOrders {
 						+ "\textras: " + rs.getString("extras")
 						+ "\tprice: " + rs.getInt("price"));
 			}
+			readAllWorked = true;
 		} catch (SQLException e) {
 			System.out.println("Bad query.");
 			e.printStackTrace();
 		}
+		
+		if (readAllWorked == true) {
+			readAllOrders = true;
+		}
+		return readAllOrders;
+			
 	}
 
 }

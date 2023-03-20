@@ -24,7 +24,7 @@ public class AddCustomer {
 	}
 	
 	
-	public static void proceed() {
+	public static boolean proceed(boolean addCustomerWorked) {
 		String data;
 		int order_id;
 		String customer_name;
@@ -32,6 +32,9 @@ public class AddCustomer {
 		String size;
 		String extra;
 		float price;
+		
+		boolean addACustomer = false;
+		addCustomerWorked = false;
 		
 		
 		try {//Access the MySQL
@@ -71,10 +74,19 @@ public class AddCustomer {
 			price + "')";
 			statement.executeUpdate(data);
 			System.out.println("Order successfully added!");
+			addACustomer = true;
 			
 		} catch (SQLException e) {
 			System.out.println("Insertion failed.");
 			e.printStackTrace();
 		}
+		
+		if (addACustomer == true) {
+			addCustomerWorked = true;
+		} 
+		return addCustomerWorked;
+			
+		
+		
 	}
 }

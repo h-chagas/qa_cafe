@@ -9,16 +9,20 @@ public class Create {
 	static Statement statement;
 	static String myPass = Passcode.mySqlPassword;
 	
-	
-	public static void proceed() {
+	public static boolean proceed(boolean allGood) {
 		String newDB;
 		String newTable;
-				
+		
+		boolean haveAccess = false;
+		boolean createDB = false;
+		boolean estabConnection = false;
+		boolean createTable = false;
+		allGood = false;
 		
 		try {//Access the MySQL
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306", "root", myPass);
 			statement = conn.createStatement();
-			
+			haveAccess = true;
 		} catch(SQLException e) {
 			System.out.println("Connection 1 failed.");
 			e.printStackTrace();
@@ -29,7 +33,7 @@ public class Create {
 		try {//Create the DB
 			statement.executeUpdate(newDB);
 			System.out.println("\nDatabase created!");
-
+			createDB = true;
 		} catch (SQLException e) {
 			System.out.println("Database creation failed.");
 			e.printStackTrace();
@@ -39,7 +43,7 @@ public class Create {
 		try {//Establish connection with DB
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qa_cafe_db", "root", myPass);
 			statement = conn.createStatement();
-
+			estabConnection = true;
 		} catch (SQLException e) {
 			System.out.println("Connection with DB failed.");
 			e.printStackTrace();
@@ -59,11 +63,16 @@ public class Create {
 		try {//Create the table
 			statement.executeUpdate(newTable);
 			System.out.println("Table created!");
-
+			createTable = true;
 		} catch (SQLException e) {
 			System.out.println("Table creation failed.");
 			e.printStackTrace();
 		}
+		
+		if (haveAccess == true && createDB == true && estabConnection == true && createTable == true)
+			allGood = true;
+			return allGood;
+		
 			
 	}
 
