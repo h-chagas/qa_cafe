@@ -65,6 +65,16 @@ If it worked, a confirmation message will be shown; <br>
 If it worked, a "See you soon!" message will be shown; <br>
 
 
+### Tests - JUnit:
+To develop the tests, I used JUnit which is the most popular Java unit testing framework.
+
+#### -- To perform the tests --<br>
+1. The tests were created in the QACafe_test.java file;
+2. As a connection, a schema and a table must be created first, the testTableIsCreated() should be run for first. If a table had been created throughtout the standard method, Create.java class, this test will fail for a obvious reason. Once this test was run once, please comment it out.
+3. All the other tests are commented out. My suggestion is to uncomment each test to run one by one.
+
+
+
 Future aditional features:
 - [ ] Autoincrement for order ID's;
 - [ ] Float number to price column;
