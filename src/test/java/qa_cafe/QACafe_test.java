@@ -5,14 +5,14 @@ import org.junit.Test;
 
 public class QACafe_test {
 
-//	@Test
-//	public void testTableIsCreated() {
-//		boolean allGood = true;
-//		boolean actual = Create.proceed(allGood);
-//		boolean expected = false;
-//		assertNotEquals(expected, actual);
-//	}
-//	
+	@Test
+	public void testTableIsCreated() {
+		boolean allGood = true;
+		boolean actual = Create.proceed(allGood);
+		boolean expected = false;
+		assertNotEquals(expected, actual);
+	}
+	
 //	@Test
 //	public void testAddingCustomer() {
 //		boolean addCustomerWorked = true;
@@ -20,7 +20,7 @@ public class QACafe_test {
 //		boolean expected = false;
 //		assertNotEquals(expected, actual);
 //	}
-//	
+	
 //	@Test
 //	public void testReadingAllOrders() {
 //		boolean readAllWorked = true;
@@ -28,7 +28,7 @@ public class QACafe_test {
 //		boolean expected = false;
 //		assertNotEquals(expected, actual);
 //	}
-//	
+	
 //	@Test
 //	public void testUpdatingOrder() {
 //		boolean addUpdatingWorked = true;
@@ -37,13 +37,13 @@ public class QACafe_test {
 //		assertNotEquals(expected, actual);
 //	}
 	
-	@Test
-	public void deletingAllOrders() {
-		boolean deleteAllWorked = true;
-		boolean actual = DeleteAllOrders.proceed(deleteAllWorked);
-		boolean expected = false;
-		assertNotEquals(expected, actual);
-	}
+//	@Test
+//	public void deletingAllOrders() {
+//		boolean deleteAllWorked = true;
+//		boolean actual = DeleteAllOrders.proceed(deleteAllWorked);
+//		boolean expected = false;
+//		assertNotEquals(expected, actual);
+//	}
 	
 
 }

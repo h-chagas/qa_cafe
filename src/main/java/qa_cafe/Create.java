@@ -57,7 +57,7 @@ public class Create {
 				" size VARCHAR(1), " +
 				" extras VARCHAR(50), " +
 				" price DECIMAL(10,2), " +
-				" PRIMARY KEY ( order_id ))";
+				" PRIMARY KEY (order_id));";
 				
 		
 		try {//Create the table

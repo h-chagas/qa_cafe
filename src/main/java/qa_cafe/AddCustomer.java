@@ -26,7 +26,6 @@ public class AddCustomer {
 	
 	public static boolean proceed(boolean addCustomerWorked) {
 		String data;
-		int order_id;
 		String customer_name;
 		String drink;
 		String size;
@@ -56,7 +55,6 @@ public class AddCustomer {
 		}
 		
 		System.out.println("Add the next customer \n");
-		order_id = getInt("Enter order ID: \n");
 		customer_name = getString("Customer name: \n");
 		drink = getString("Beverage: \n");
 		size = getString("What size? L, M or S: \n");
@@ -65,15 +63,14 @@ public class AddCustomer {
 		
 		
 		try {
-			data = "INSERT INTO orders VALUES ('" + 
-			order_id + "', '" +
+			data = "INSERT INTO orders (customer_name, drink, size, extras, price) VALUES ('" + 
 			customer_name + "', '" + 
 			drink + "', '" + 
 			size + "', '" +
 			extra + "', '" +
 			price + "')";
 			statement.executeUpdate(data);
-			System.out.println("Order successfully added!");
+			System.out.println("Order number successfully added!");
 			addACustomer = true;
 			
 		} catch (SQLException e) {
